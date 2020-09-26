@@ -34,40 +34,51 @@ namespace Desktop_Application
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from WindowUser where UserName = '"+textusername.Text+ "' and Password = '"+textpass.Text+"'";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);           
-            con.Close();
-
-
-
-            if (dt.Rows.Count == 1)
+            try
             {
-                FirstPage ff = new FirstPage();
-                this.Hide();
-                ff.Show();
-            }
-            else
-            {
-                MessageBox.Show("Invalid User Name or Password");
-            }
-        }
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from WindowUser where UserName = '" + textusername.Text + "' and Password = '" + textpass.Text + "'";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.Close();
 
-        private async void Form1_Load(object sender, EventArgs e)
-        {
-           
+
+
+                if (dt.Rows.Count == 1)
+                {
+                    FirstPage ff = new FirstPage();
+                    this.Hide();
+                    ff.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid User Name or Password");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Registration registration = new Registration();
-            this.Hide();
-            registration.Show();
+            try
+            {
+                Registration registration = new Registration();
+                this.Hide();
+                registration.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+           
         }
     }
 }
