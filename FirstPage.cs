@@ -38,6 +38,8 @@ namespace Desktop_Application
 
         private void Button3_Click(object sender, EventArgs e)
         {
+            Form1 form2 = new Form1();
+            form2.Show();
             this.Close();
         }
     }

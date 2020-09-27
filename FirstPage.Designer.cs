@@ -37,10 +37,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(88, 123);
+            this.button1.Location = new System.Drawing.Point(88, 90);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(266, 28);
+            this.button1.Size = new System.Drawing.Size(266, 61);
             this.button1.TabIndex = 0;
             this.button1.Text = "Add or Modify Doctors List";
             this.button1.UseVisualStyleBackColor = true;
@@ -49,10 +49,10 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(375, 123);
+            this.button2.Location = new System.Drawing.Point(375, 90);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(327, 28);
+            this.button2.Size = new System.Drawing.Size(327, 61);
             this.button2.TabIndex = 0;
             this.button2.Text = "Add or Modify Patient and assign to Doctor";
             this.button2.UseVisualStyleBackColor = true;
@@ -63,9 +63,9 @@
             this.button3.Location = new System.Drawing.Point(281, 207);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(179, 28);
+            this.button3.Size = new System.Drawing.Size(179, 63);
             this.button3.TabIndex = 1;
-            this.button3.Text = "Exit";
+            this.button3.Text = "Log Out";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
